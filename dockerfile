@@ -7,6 +7,7 @@ RUN dnf update -y && \
     wget \
     openssh-clients  \
     openssh-server  \
+    net-tools \
     && dnf clean all
 
 COPY install-hadoop.sh /etc/hadoop/
@@ -21,6 +22,9 @@ COPY init.sh /init.sh
 RUN  chmod +x /init.sh
 
 WORKDIR /usr/local/hadoop
+
+COPY core-site.xml etc/hadoop/
+COPY hdfs-site.xml etc/hadoop/
 
 EXPOSE 50070 50075
 EXPOSE 8030 8031 8032 8033

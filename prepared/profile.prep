@@ -1,0 +1,50 @@
+# /etc/profile
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+export JRE_HOME=${JAVA_HOME}/jre    
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib   
+export PATH=${JAVA_HOME}/bin:$PATH
+
+# JAVACLASS from Hadoop
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/mapreduce
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/common/sources
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/sources
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/test
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/timelineservice
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/tools/sources
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/timelineservice/test
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/timelineservice/lib
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/mapreduce/sources
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/common/lib
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/mapreduce/lib-examples
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/common
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/hdfs/lib
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/client
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/lib
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/hdfs/sources
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/csi/lib
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/yarn/csi
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/tools/lib
+export CLASSPATH=$CLASSPATH:/usr/local/hadoop/share/hadoop/hdfs
+
+#Hadoop
+export HADOOP_HOME=/usr/local/hadoop
+export HADOOP_LOG_DIR=$HADOOP_HOME/logs
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export HADOOP_COMMON_HOME=$HADOOP_HOME 
+export HADOOP_HDFS_HOME=$HADOOP_HOME 
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_YARN_HOME=$HADOOP_HOME 
+export HADOOP_INSTALL=$HADOOP_HOME 
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native 
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_LIBEXEC_DIR=$HADOOP_HOME/libexec 
+export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
+export HDFS_DATANODE_USER=root
+export HDFS_DATANODE_SECURE_USER=root
+export HDFS_SECONDARYNAMENODE_USER=root
+export HDFS_NAMENODE_USER=root
+export YARN_RESOURCEMANAGER_USER=root
+export YARN_NODEMANAGER_USER=root

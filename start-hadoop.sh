@@ -1,4 +1,4 @@
-# start-hadoop.sh
+# /etc/hadoop/start-hadoop.sh
 #!/bin/bash
 
 hadoop namenode -format

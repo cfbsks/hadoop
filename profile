@@ -1,11 +1,14 @@
+# /etc/profile
+
 # Java
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 export JRE_HOME=${JAVA_HOME}/jre    
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib    
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib   
 export PATH=${JAVA_HOME}/bin:$PATH
 
 #Hadoop
 export HADOOP_HOME=/usr/local/hadoop
+export HADOOP_LOG_DIR=$HADOOP_HOME/logs
 export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 export HADOOP_COMMON_HOME=$HADOOP_HOME 
 export HADOOP_HDFS_HOME=$HADOOP_HOME 
