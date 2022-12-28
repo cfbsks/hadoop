@@ -12,5 +12,9 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 # Load /etc/profile
 source /etc/profile
 
+# start hdfs
+/usr/local/hadoop/bin/hdfs namenode -format
+/usr/local/hadoop/sbin/start-dfs.sh
+
 # Run a shell
 /bin/bash
