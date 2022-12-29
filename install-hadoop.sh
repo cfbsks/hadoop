@@ -4,8 +4,8 @@
 # Check if wget is installed
 if ! command -v wget >/dev/null; then
     # Install wget
-    sudo dnf update -y
-    sudo dnf install -y wget
+    dnf update -y
+    dnf install -y wget
 fi
 
 # Check if variable is set
